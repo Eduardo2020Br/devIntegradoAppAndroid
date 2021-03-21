@@ -1,13 +1,14 @@
 package com.courses.applicationcontentprovider.applicationcontentprovider.database
 
+import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.provider.BaseColumns._ID
 import java.security.AccessControlContext
 
 class NotesDatabaseHelper(
-    context:
-:):SQLiteOpenHelper(context, "databaseNotes", null, 1 ) {
+    context: Context
+):SQLiteOpenHelper(context, "databaseNotes", null, 1 ) {
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL( "CREATE TABLE_$TABLE_NOTES ("+
                 "$_ID INTEGER NOT NULL PRIMARY KEY)" +
